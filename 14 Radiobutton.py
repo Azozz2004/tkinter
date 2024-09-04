@@ -4,7 +4,7 @@ from tkinter import ttk
 pro = Tk()
 pro.geometry('600x400')
 ################################
-## there are to ways to show button >>
+## there are two ways to show button >>
 r1 = Radiobutton(pro,text="male1",value=1)
 # r1.pack()
 r1.place(x=10,y=20)
