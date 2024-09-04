@@ -4,7 +4,7 @@ from tkinter import ttk
 pro = Tk()
 pro.geometry('500x400')
 ################################
-## there are to ways to show button >>
+## there are two ways to show button >>
 sc1 = Scrollbar(pro,orient=VERTICAL)
 sc1.pack(side=RIGHT,fill=Y)
 ## fill = Y  >> if VERTICAL
