@@ -17,7 +17,7 @@ class Student:
         title.pack(fill=X)
         #############################################################
         Manage_Frame = Frame(self.pro, bg="white")
-        Manage_Frame.place(x=5,y=30,width=350,height=400)
+        Manage_Frame.place(x=5,y=30,width=350,height=450)
         #-------------
         lbl_gender = Label(Manage_Frame,text="choose gender",bg="white",font="bold")
         lbl_gender.pack()
@@ -61,7 +61,7 @@ class Student:
         delete_Entry.pack()
         #############################################################
         btn_frame = Frame(self.pro,bg="white")
-        btn_frame.place(x=5,y=430,width=350,height=305)
+        btn_frame.place(x=5,y=490,width=350,height=245)
         #-------------
         title1 = Label(btn_frame,text="control panel",fg="black",bg="#318b91",font=("Deco",14,"bold"))
         title1.pack(fill=X)
@@ -73,16 +73,16 @@ class Student:
         del_btn.place(x=180,y=50,width=150,height=30)
         #-------------
         update_btn = Button(btn_frame,text="update student",bg="#aed6f1",font="bold")
-        update_btn.place(x=10,y=155,width=150,height=30)
+        update_btn.place(x=10,y=105,width=150,height=30)
         #-------------
         clear_btn = Button(btn_frame,text="clear fields",bg="#aed6f1",font="bold")
-        clear_btn.place(x=180,y=155,width=150,height=30)
+        clear_btn.place(x=180,y=105,width=150,height=30)
         #-------------
         about_btn = Button(btn_frame,text="about",bg="#f7dc6f",font="bold")
-        about_btn.place(x=10,y=260,width=150,height=30)
+        about_btn.place(x=10,y=190,width=150,height=30)
         #-------------
         exit_btn = Button(btn_frame,text="Exit",fg="white",bg="#873600",font="bold")
-        exit_btn.place(x=180,y=260,width=150,height=30)
+        exit_btn.place(x=180,y=190,width=150,height=30)
         #############################################################
         search_frame = Frame(self.pro,bg="white")
         search_frame.place(x=360,y=31,width=1535,height=50)
