@@ -8,6 +8,9 @@ class Student:
         self.pro.title("School management program")
         self.pro.configure(background="silver")
         self.pro.resizable(False,False)   # to control in max & min
+        
+        
+        
         ####################### project name ############################
         title = Label(  self.pro, 
                         text="[ Student registration system ]",
@@ -15,50 +18,71 @@ class Student:
                         fg="white",
                         font=("monospace",15,"bold"))
         title.pack(fill=X)
+        
+        
+        
+        ####################### DataBase ############################
+        # Call these variables inside the input fields :
+        self.gender_var  = StringVar()
+        self.id_var      = StringVar()
+        self.name_var    = StringVar()
+        self.email_var   = StringVar()
+        self.phone_var   = StringVar()
+        self.certif_var  = StringVar()
+        self.address_var = StringVar()
+        self.delete_var  = StringVar()
+        self.search_var  = StringVar()
+        ## now put it in his place by [ ]text variable inside Entry ]
+        
+        
+        
         ####################### input data ##########################
         Manage_Frame = Frame(self.pro, bg="white")
         Manage_Frame.place(x=5,y=30,width=350,height=450)
         #-------------
         lbl_gender = Label(Manage_Frame,text="choose gender",bg="white",font="bold")
         lbl_gender.pack()
-        combo_gender = ttk.Combobox(Manage_Frame,justify="center")
+        combo_gender = ttk.Combobox(Manage_Frame,justify="center",textvariable=self.gender_var)
         combo_gender["value"] =("Male","Female")
         combo_gender.pack(fill=X)
         #-------------
         lbl_ID = Label(Manage_Frame,text="Serial number",bg="white",font="bold")
         lbl_ID.pack()
-        ID_Entry = Entry(Manage_Frame,bd="2",font=10)  # bd : to make boundaries
+        ID_Entry = Entry(Manage_Frame,bd="2",font=10,textvariable=self.id_var)  # bd : to make boundaries
         ID_Entry.pack()
         #-------------
         lbl_name = Label(Manage_Frame,text="Student name",bg="white",font="bold")
         lbl_name.pack()
-        name_Entry = Entry(Manage_Frame,bd="2",justify="left",font=10) 
+        name_Entry = Entry(Manage_Frame,bd="2",justify="left",font=10,textvariable=self.name_var) 
         name_Entry.pack()
         #-------------
         lbl_email = Label(Manage_Frame,text="Student e-mail",bg="white",font="bold")
         lbl_email.pack()
-        email_Entry = Entry(Manage_Frame,bd="2",font=10)
+        email_Entry = Entry(Manage_Frame,bd="2",font=10,textvariable=self.email_var)
         email_Entry.pack()
         #-------------
         lbl_phone = Label(Manage_Frame,text="Student phone",bg="white",font="bold")
         lbl_phone.pack()
-        phone_Entry = Entry(Manage_Frame,bd="2",font=10)
+        phone_Entry = Entry(Manage_Frame,bd="2",font=10,textvariable=self.phone_var)
         phone_Entry.pack()
         #-------------
         lbl_certification = Label(Manage_Frame,text="certification",bg="white",font="bold")
         lbl_certification.pack()
-        certification_Entry = Entry(Manage_Frame,bd="2",font=10)
+        certification_Entry = Entry(Manage_Frame,bd="2",font=10,textvariable=self.certif_var)
         certification_Entry.pack()
         #-------------
         lbl_address = Label(Manage_Frame,text="Student address",bg="white",font="bold")
         lbl_address.pack()
-        address_Entry = Entry(Manage_Frame,bd="2",font=10)
+        address_Entry = Entry(Manage_Frame,bd="2",font=10,textvariable=self.address_var)
         address_Entry.pack()
         #-------------
         lbl_delete = Label(Manage_Frame,text="Delete student",fg="red",bg="white",font="bold")
         lbl_delete.pack()
-        delete_Entry = Entry(Manage_Frame,justify="center",bd="2",font=10)
+        delete_Entry = Entry(Manage_Frame,justify="center",bd="2",font=10,textvariable=self.delete_var)
         delete_Entry.pack()
+        
+        
+        
         ####################### control panel ########################
         btn_frame = Frame(self.pro,bg="white")
         btn_frame.place(x=5,y=490,width=350,height=245)
@@ -83,6 +107,9 @@ class Student:
         #-------------
         exit_btn = Button(btn_frame,text="Exit",fg="white",bg="#873600",font="bold")
         exit_btn.place(x=180,y=190,width=150,height=30)
+        
+        
+        
         ####################### Search ###########################
         search_frame = Frame(self.pro,bg="white")
         search_frame.place(x=360,y=31,width=1535,height=50)
@@ -94,11 +121,14 @@ class Student:
         combo_search["value"] =("id","name","email","phone","address")
         combo_search.place(x=160,y=15)
         #-------------
-        search_Entry = Entry(search_frame,bd="2")
+        search_Entry = Entry(search_frame,bd="2",textvariable=self.search_var)
         search_Entry.place(x=320,y=15)
         #-------------
         search_btn = Button(search_frame,text="Search",bg="#aab7b8")
         search_btn.place(x=460,y=12)
+        
+        
+        
         ###################### table search ############################
         Details_frame = Frame(self.pro,bg="white",background="#d6dbdf")
         Details_frame.place(x=360,y=85,width=1535,height=650)
