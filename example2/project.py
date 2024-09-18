@@ -8,14 +8,14 @@ class Student:
         self.pro.title("School management program")
         self.pro.configure(background="silver")
         self.pro.resizable(False,False)   # to control in max & min
-        #############################################################
+        ####################### project name ############################
         title = Label(  self.pro, 
                         text="[ Student registration system ]",
                         bg="#67b0b5",
                         fg="white",
                         font=("monospace",15,"bold"))
         title.pack(fill=X)
-        #############################################################
+        ####################### input data ##########################
         Manage_Frame = Frame(self.pro, bg="white")
         Manage_Frame.place(x=5,y=30,width=350,height=450)
         #-------------
@@ -59,7 +59,7 @@ class Student:
         lbl_delete.pack()
         delete_Entry = Entry(Manage_Frame,justify="center",bd="2",font=10)
         delete_Entry.pack()
-        #############################################################
+        ####################### control panel ########################
         btn_frame = Frame(self.pro,bg="white")
         btn_frame.place(x=5,y=490,width=350,height=245)
         #-------------
@@ -83,7 +83,7 @@ class Student:
         #-------------
         exit_btn = Button(btn_frame,text="Exit",fg="white",bg="#873600",font="bold")
         exit_btn.place(x=180,y=190,width=150,height=30)
-        #############################################################
+        ####################### Search ###########################
         search_frame = Frame(self.pro,bg="white")
         search_frame.place(x=360,y=31,width=1535,height=50)
         #-------------
@@ -99,7 +99,7 @@ class Student:
         #-------------
         search_btn = Button(search_frame,text="Search",bg="#aab7b8")
         search_btn.place(x=460,y=12)
-        #############################################################
+        ###################### table search ############################
         Details_frame = Frame(self.pro,bg="white",background="#d6dbdf")
         Details_frame.place(x=360,y=85,width=1535,height=650)
         #-------------
