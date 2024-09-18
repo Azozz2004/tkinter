@@ -7,7 +7,7 @@ class Student:
         self.pro.geometry("1900x760+1+1")
         self.pro.title("School management program")
         self.pro.configure(background="silver")
-        self.pro.resizable(False,False)   # to control in max & min
+        self.pro.resizable(TRUE,False)   # to control in max & min
         
         
         
@@ -119,13 +119,13 @@ class Student:
         #-------------
         combo_search = ttk.Combobox(search_frame,justify="center")
         combo_search["value"] =("id","name","email","phone","address")
-        combo_search.place(x=160,y=15)
+        combo_search.place(x=200,y=15)
         #-------------
         search_Entry = Entry(search_frame,bd="2",textvariable=self.search_var)
-        search_Entry.place(x=320,y=15)
+        search_Entry.place(x=350,y=15)
         #-------------
         search_btn = Button(search_frame,text="Search",bg="#aab7b8")
-        search_btn.place(x=460,y=12)
+        search_btn.place(x=490,y=12)
         
         
         
